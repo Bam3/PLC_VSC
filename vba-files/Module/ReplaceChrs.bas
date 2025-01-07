@@ -6,15 +6,15 @@ Sub pokaziFormo()
 End Sub
 
 Sub popraviSumnike(ws As Worksheet)
-    'Funkcija gre èez celotni dokument in popravi od proficyja zdrkane šumnike
+    'Funkcija gre ï¿½ez celotni dokument in popravi od proficyja zdrkane ï¿½umnike
     Dim findStrings As Variant
     Dim replaceStrings As Variant
     Dim i As Long
 
     ' Set up arrays with find and replace strings
-    ' vèasih dobim ene vrste znakcov, vèasih pa drugaène. No idea why.
-    findStrings = Array("Ä", "Å¡", "Å¾", "ÄŒ", "Å ", "Å½", "ÄT", "L~?", "Ll", "ÄS", "Š", "", "A¨", "A~?", "â€“", Â)
-    replaceStrings = Array("è", "š", "", "È", "Š", "", "è", "š", "", "È", "Š", "", "è", "È", "-", "")
+    ' vï¿½asih dobim ene vrste znakcov, vï¿½asih pa drugaï¿½ne. No idea why.
+    findStrings = Array("Ã„Â", "Ã…Â¡", "Ã…Â¾", "Ã„Å’", "Ã… ", "Ã…Â½", "Ã„T", "L~?", "Ll", "Ã„S", "Å ", "Å½", "AÂ¨", "A~?", "Ã¢â‚¬â€œ", Ã‚,"Ãˆ")
+    replaceStrings = Array("Ä", "Å¡", "Å¾", "Ä", "Å ", "Å½", "Ä", "Å¡", "Å¾", "ÄŒ", "Å ", "Å½", "Ä", "ÄŒ", "-", "","ÄŒ")
 
     ' Replace strings in the selected worksheet
     With ws.Cells
@@ -23,7 +23,7 @@ Sub popraviSumnike(ws As Worksheet)
         Next i
     End With
     
-    MsgBox "Konèano!"
+    MsgBox "KonÄano!"
     
 End Sub
 

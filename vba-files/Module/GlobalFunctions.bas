@@ -238,13 +238,13 @@ sFileName = fileName & ".csv"
     
 Application.DisplayAlerts = True
 
-heh = MsgBox("Datoteka " & sFileName & " se nahaja na lokaciji: " & directory, vbInformation, "Sporo�ilo!")
+heh = MsgBox("Datoteka " & sFileName & " se nahaja na lokaciji: " & directory, vbInformation, "Sporočilo!")
 
 End Sub
 
 Public Function decimalneVejiceEnote(ByVal enotaSenzorja As String, ByVal mejaSenzorja As String) As String
 
-    If enotaSenzorja Like "�C" _
+    If enotaSenzorja Like "°C" _
     Or enotaSenzorja Like "%" _
     Or enotaSenzorja Like "m3/h" Then
         decimalneVejiceEnote = Format(mejaSenzorja, "#0.0")
@@ -331,7 +331,3 @@ Dim numberOfRegister As Integer
         End If
     Next
 End Function
-
-Public Sub RibbonLook()
-    MsgBox "Ribbon", , "Ribbon"
-End Sub

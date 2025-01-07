@@ -2,16 +2,22 @@
   <ribbon startFromScratch="false">
     <tabs>
       <tab id="MetronikTab" label="Metronik">
+        <group id="MetronikIOT" label="IOT"> 
+          <button id="PopraviPraznaPolja" label="Popravi prazna polja" imageMso="EnableInlineEdit" size="large" onAction="MyRibbon.PraznaPolja" />      
+          <button id="PopraviSumnike" label="Popravi šumnike" imageMso="AsianLayoutPhoneticGuide" size="large" onAction="MyRibbon.Sumniki" />      
+        </group>
         <group id="MetronikPLC" label="Ustvari PLC"> 
-          <button id="UstvariVariable" label="Ustvari PLC variable" imageMso="FunctionWizard" size="large" onAction="MyRibbon.Variables" />      
           <button id="UstvariAI2EGU" label="ustvari logiko AI2EGU" imageMso="PivotTableOlapTools" size="large" onAction="MyRibbon.AI2EGU" />      
           <button id="UstvariMEJE" label="Ustvari meje za AI2EGU" imageMso="RerouteOnCrossover" size="large" onAction="MyRibbon.MEJE" />      
           <button id="UstvariAIALM" label="Ustvari alarmiranje AI" imageMso="RerouteAsNeeded" size="large" onAction="MyRibbon.EGUALM" />      
           <button id="UstvariCTRL" label="Ustvari CTRL blok" imageMso="InsertConditionGallery" size="large" onAction="MyRibbon.CTRL" />      
           <button id="UstvariI2VD" label="Ustvari I2VD blok" imageMso="EastAsianEditingMarks" size="large" onAction="MyRibbon.I2VD" />      
         </group>
-        <group id="customGroup2" label="Second">
-          <button id="btn3" label="Button-3" imageMso="MasterDocumentShow" size="normal" onAction="MyRibbon.btn3" />
+        <group id="MetronikSCADA" label="Ustvari SCADA">
+          <button id="UstvariTGD" label="Ustvari TGD" imageMso="ContTypeCreateContentType" size="large" onAction="MyRibbon.TGD" />
+          <button id="UstvariESIGN" label="Ustvari ESIGN" imageMso="CodeEdit" size="large" onAction="MyRibbon.ESIGN" />
+          <button id="UstvariGE9" label="Ustvari GE9" imageMso="ConnectToServer" size="large" onAction="MyRibbon.GE9" />
+          <button id="UstvariPDB" label="Ustvari PDB reg." imageMso="DatabaseAccessBackEnd" size="large" onAction="MyRibbon.PDB" />
         </group>
       </tab>
     </tabs>
