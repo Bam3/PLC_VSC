@@ -1,0 +1,32 @@
+Attribute VB_Name = "ReplaceChrs"
+'novo dodano!
+
+Sub pokaziFormo()
+    UserFormSumniki.Show
+End Sub
+
+Sub popraviSumnike(ws As Worksheet)
+    'Funkcija gre Ëez celotni dokument in popravi od proficyja zdrkane öumnike
+    Dim findStrings As Variant
+    Dim replaceStrings As Variant
+    Dim i As Long
+
+    ' Set up arrays with find and replace strings
+    ' vËasih dobim ene vrste znakcov, vËasih pa drugaËne. No idea why.
+    findStrings = Array("ƒç", "≈°", "≈æ", "ƒå", "≈ ", "≈Ω", "ƒT", "L~?", "Ll", "ƒS", "ä", "é", "A®", "A~?", "‚Äì", ¬)
+    replaceStrings = Array("Ë", "ö", "û", "»", "ä", "é", "Ë", "ö", "û", "»", "ä", "é", "Ë", "»", "-", "")
+
+    ' Replace strings in the selected worksheet
+    With ws.Cells
+        For i = LBound(findStrings) To UBound(findStrings)
+            .Replace what:=findStrings(i), replacement:=replaceStrings(i), LookAt:=xlPart, MatchCase:=True
+        Next i
+    End With
+    
+    MsgBox "KonËano!"
+    
+End Sub
+
+
+
+
